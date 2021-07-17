@@ -44,6 +44,14 @@ public class StackLinkedList {
 	            }
 	    }
 	}
+	 public void pop() {
+	     if (top == null) {
+	    	 System.out.print("\nStack Underflow");
+	         return;
+	     }
+	     top = (top).link;
+	 }
+	 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Stack Problems");
 		
@@ -52,6 +60,13 @@ public class StackLinkedList {
 		list.push(30);
 		list.push(56);
 		
+		list.display();
+		System.out.printf("\nTop element is %d\n", list.peek());
+		
+		list.pop();
+		list.pop();
+		list.pop();
+
 		list.display();
 		System.out.printf("\nTop element is %d\n", list.peek());
 		
